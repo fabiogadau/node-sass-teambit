@@ -1,1 +1,78 @@
+/* VARIABLES */
+
+/* GENERAL LAYOUT */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  font-family: "Open Sans", sans-serif;
+  color: #58402c;
+  background-color: #fff;
+}
+
+/* MIXIN */
+
+/* HEADER */
+
+.header_container {
+  width: 100%;
+  position: fixed;
+}
+
+header {
+  max-width: 1170px;
+  margin: 0 auto;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 20px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #bdb5af;
+}
+
+.header_nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header_nav li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.header_nav li:last-child {
+  width: 100px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #30488f;
+  background-color: #30488f;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 0;
+  background-color: #fff;
+  color: #30488f;
+}
+
+.header_nav li:last-child:hover {
+  background-color: #30488f;
+  color: #fff;
+}
+
+.header_nav li:last-child > img {
+  max-width: 18px;
+  margin-right: 12px;
+}
+
 

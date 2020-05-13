@@ -1,0 +1,40 @@
+/* HEADER */
+.header_container {
+  @include width(100%);
+  position: fixed;
+}
+
+header {
+  @include total-width(1170px);
+  @include font-setup(13px, 600);
+  @include total-padding(20px 0 20px);
+  @include flex(space-between);
+  @include border-bottom_col;
+}
+
+.header_nav {
+  @include flex;
+
+  li {
+    @include header-list_setup;
+    cursor: pointer;
+  }
+  
+  li:last-child {
+    @include width(100px);
+    @include btn(8px 10px);
+    @include flex;
+    margin-right: 0;
+    background-color: #fff;
+    color: $btn_col;
+
+    &:hover {
+      background-color: $btn_col;
+      color: #fff;
+    }
+  
+    & > img {
+      @include btn_img;
+    }
+  }
+}
