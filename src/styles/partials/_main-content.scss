@@ -12,13 +12,14 @@ main {
   text-align: center;
 }
 
+/* Jumbotron Banner */
 .jumbotron_banner__text {
   @include total-width(80%);
   text-align: center;
   margin-bottom: 40px;
 
   h1 {
-    @include font-setup(45px, 600);
+    @include font-setup(50px, 600);
     margin-bottom: 40px;
   }
 }
@@ -40,6 +41,7 @@ main {
 
     & > img {
       @include btn_img;
+      margin-right: 0;
     }
   }
 
@@ -63,4 +65,75 @@ main {
 .jumbotron_img {
   @include total-width(320px);
   margin-top: 20px;
+}
+
+
+/* RESPONSIVE */
+// Mobile Landscape
+@media all and (min-width: 667px) {
+  .jumbotron_banner__text {
+    @include total-width(95%);
+    margin-bottom: 40px;
+  }
+
+  .jumbotron_banner__btns {
+    @include width(100%);
+    @include total-padding(0);
+    @include flex(center);
+    flex-direction: row;
+    
+    a {
+      @include width(175px);
+    }
+  
+    & > a:first-child {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+  
+    & > a:last-child {
+      margin-top: 0;
+      margin-left: 20px;
+    }
+  }
+
+  .jumbotron_img {
+    @include total-width(620px);
+  }
+}
+
+// Tablet
+@media all and (min-width: 1024px) {
+  .jumbotron_banner__text {
+    @include total-width(70%);
+    margin-bottom: 40px;
+  }
+}
+
+// Desktop
+@media all and (min-width: 1170px) {
+  .jumbotron {
+    @include flex;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .jumbotron_banner {
+    margin-right: 50px;
+  }
+
+  .jumbotron_banner__text {
+    @include total-width(100%);
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  .jumbotron_banner__btns {
+    @include flex;
+    flex-direction: row;
+  }
+
+  .jumbotron_img {
+    @include total-width(560px);
+  }
 }

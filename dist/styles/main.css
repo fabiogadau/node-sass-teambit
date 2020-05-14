@@ -155,6 +155,7 @@ main {
   text-align: center;
 }
 
+/* Jumbotron Banner */
 .jumbotron_banner__text {
   max-width: 80%;
   margin: 0 auto;
@@ -162,7 +163,7 @@ main {
   margin-bottom: 40px;
 }
 .jumbotron_banner__text h1 {
-  font-size: 45px;
+  font-size: 50px;
   font-weight: 600;
   margin-bottom: 40px;
 }
@@ -196,6 +197,7 @@ main {
 .jumbotron_banner__btns a > img {
   max-width: 18px;
   margin-right: 12px;
+  margin-right: 0;
 }
 .jumbotron_banner__btns > a:first-child {
   margin-bottom: 10px;
@@ -215,4 +217,77 @@ main {
   max-width: 320px;
   margin: 0 auto;
   margin-top: 20px;
+}
+
+/* RESPONSIVE */
+@media all and (min-width: 667px) {
+  .jumbotron_banner__text {
+    max-width: 95%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  .jumbotron_banner__btns {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .jumbotron_banner__btns a {
+    width: 175px;
+  }
+  .jumbotron_banner__btns > a:first-child {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+  .jumbotron_banner__btns > a:last-child {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+
+  .jumbotron_img {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+}
+@media all and (min-width: 1024px) {
+  .jumbotron_banner__text {
+    max-width: 70%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+}
+@media all and (min-width: 1170px) {
+  .jumbotron {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .jumbotron_banner {
+    margin-right: 50px;
+  }
+
+  .jumbotron_banner__text {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  .jumbotron_banner__btns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .jumbotron_img {
+    max-width: 560px;
+    margin: 0 auto;
+  }
 }
