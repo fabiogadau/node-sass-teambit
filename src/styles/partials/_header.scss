@@ -1,11 +1,10 @@
 /* HEADER */
-.header_container {
+header {
   @include width(100%);
-  position: fixed;
 }
 
-header {
-  @include total-width(1170px);
+.header_content {
+  @include total-width($desktop-width);
   @include font-setup(13px, 600);
   @include total-padding(20px 0 20px);
   @include flex(space-between);
