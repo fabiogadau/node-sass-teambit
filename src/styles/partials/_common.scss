@@ -22,29 +22,24 @@ body {
   width: $width;
 }
 
+@mixin total-padding($total-padding) {
+  padding: $total-padding;
+}
+
 @mixin font-setup($font-size, $font-weight) {
   font-size: $font-size;
   font-weight: $font-weight;
 }
 
-@mixin border-bottom_col {
-  border-bottom: $border-bott_col;
-}
-
-@mixin total-padding($total-padding) {
-  padding: $total-padding;
+@mixin link-setup {
+  text-decoration: none;
+  color: $font_col;
 }
 
 @mixin flex($justify: flex-start) {
   display: flex;
   justify-content: $justify;
   align-items: center;
-}
-
-@mixin header-list_setup {
-  list-style: none;
-  display: inline-block;
-  margin-right: 40px;
 }
 
 @mixin btn($btn-padding) {
@@ -59,4 +54,14 @@ body {
 @mixin btn_img {
   max-width: 18px;
   margin-right: 12px;
+}
+
+@mixin border-bottom_col {
+  border-bottom: $border-bott_col;
+}
+
+@mixin header-list_setup {
+  list-style: none;
+  display: inline-block;
+  margin-right: 40px;
 }

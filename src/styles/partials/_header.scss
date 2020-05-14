@@ -12,12 +12,16 @@ header {
   @include border-bottom_col;
 }
 
+/* Header Navbar */
 .header_nav {
   @include flex;
 
   li {
     @include header-list_setup;
-    cursor: pointer;
+
+    & > a {
+      @include link-setup;
+    }
   }
   
   li:last-child {

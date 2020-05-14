@@ -36,6 +36,8 @@ header {
   border-bottom: 1px solid #bdb5af;
 }
 
+/* Header Navbar */
+
 .header_nav {
   display: flex;
   justify-content: flex-start;
@@ -46,7 +48,11 @@ header {
   list-style: none;
   display: inline-block;
   margin-right: 40px;
-  cursor: pointer;
+}
+
+.header_nav li > a {
+  text-decoration: none;
+  color: #58402c;
 }
 
 .header_nav li:last-child {
