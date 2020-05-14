@@ -1,7 +1,5 @@
 /* VARIABLES */
-
 /* GENERAL LAYOUT */
-
 * {
   margin: 0;
   padding: 0;
@@ -16,9 +14,8 @@ body {
 }
 
 /* MIXIN */
-
+/* General */
 /* HEADER */
-
 .header_container {
   width: 100%;
   position: fixed;
@@ -36,26 +33,36 @@ header {
   border-bottom: 1px solid #bdb5af;
 }
 
-/* Header Navbar */
-
-.header_nav {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+/* Header Logo */
+.header_logo {
+  margin-left: 30px;
 }
 
-.header_nav li {
+/* Header Hamburger Navigation */
+.header_hamburger-nav {
+  margin-right: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Header Navbar */
+.header_nav {
+  display: none;
+  margin-right: 30px;
+}
+.header_nav > li {
   list-style: none;
   display: inline-block;
   margin-right: 40px;
 }
-
-.header_nav li > a {
+.header_nav > li > a {
   text-decoration: none;
   color: #58402c;
 }
-
-.header_nav li:last-child {
+.header_nav > li > a:hover {
+  color: #30488f;
+}
+.header_nav > li:last-child {
   width: 100px;
   padding: 8px 10px;
   border-radius: 8px;
@@ -70,15 +77,65 @@ header {
   background-color: #fff;
   color: #30488f;
 }
-
-.header_nav li:last-child:hover {
+.header_nav > li:last-child:hover {
   background-color: #30488f;
   color: #fff;
 }
-
-.header_nav li:last-child > img {
+.header_nav > li:last-child > img {
   max-width: 18px;
   margin-right: 12px;
 }
 
+.dropdown-menu_container {
+  position: relative;
+}
+.dropdown-menu_container .dropdown-menu {
+  width: 100px;
+  padding: 10px 10px;
+  position: absolute;
+  top: 20px;
+  left: -15px;
+  text-align: left;
+  border-radius: 7px;
+  border: 1px solid #e1ddd4;
+  background-color: #fff;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+.dropdown-menu_container .dropdown-menu > li {
+  list-style: none;
+  display: block;
+  margin-bottom: 15px;
+}
+.dropdown-menu_container .dropdown-menu > li > a {
+  text-decoration: none;
+  color: #58402c;
+}
+.dropdown-menu_container .dropdown-menu > li > a:hover {
+  color: #30488f;
+}
+.dropdown-menu_container .dropdown-menu > li:last-child {
+  margin-bottom: 0;
+}
 
+/* Responsive */
+@media all and (min-width: 768px) {
+  .header_hamburger-nav {
+    display: none;
+  }
+
+  .header_nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+@media all and (min-width: 1170px) {
+  .header_nav {
+    margin-right: 0;
+  }
+
+  .header_logo {
+    margin-left: 0;
+  }
+}

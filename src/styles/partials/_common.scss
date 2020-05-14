@@ -12,7 +12,11 @@ body {
   background-color: $body-bg_col;
 }
 
+
 /* MIXIN */
+
+/* General */
+// Width
 @mixin total-width($total-width) {
   max-width: $total-width;
   margin: 0 auto;
@@ -22,10 +26,12 @@ body {
   width: $width;
 }
 
+// Padding
 @mixin total-padding($total-padding) {
   padding: $total-padding;
 }
 
+// Font
 @mixin font-setup($font-size, $font-weight) {
   font-size: $font-size;
   font-weight: $font-weight;
@@ -36,12 +42,19 @@ body {
   color: $font_col;
 }
 
+@mixin list_setup($direction: block) {
+  list-style: none;
+  display: $direction;
+}
+
+// Layout
 @mixin flex($justify: flex-start) {
   display: flex;
   justify-content: $justify;
   align-items: center;
 }
 
+// Buttons
 @mixin btn($btn-padding) {
   padding: $btn-padding;
   border-radius: 8px;
@@ -56,12 +69,7 @@ body {
   margin-right: 12px;
 }
 
+// Border
 @mixin border-bottom_col {
   border-bottom: $border-bott_col;
-}
-
-@mixin header-list_setup {
-  list-style: none;
-  display: inline-block;
-  margin-right: 40px;
 }

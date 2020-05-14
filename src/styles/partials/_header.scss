@@ -12,24 +12,42 @@ header {
   @include border-bottom_col;
 }
 
+/* Header Logo */
+.header_logo {
+  margin-left: 30px;
+}
+
+/* Header Hamburger Navigation */
+.header_hamburger-nav {
+  margin-right: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 /* Header Navbar */
 .header_nav {
-  @include flex;
+  display: none;
+  margin-right: 30px;
 
-  li {
-    @include header-list_setup;
+  & > li {
+    @include list_setup(inline-block);
+    margin-right: 40px;
 
     & > a {
       @include link-setup;
+
+      &:hover {
+        color: $btn_col;
+      }
     }
   }
   
-  li:last-child {
+  & > li:last-child {
     @include width(100px);
     @include btn(8px 10px);
     @include flex;
     margin-right: 0;
-    background-color: #fff;
+    background-color: $headernav-btn-bg_col;
     color: $btn_col;
 
     &:hover {
@@ -40,5 +58,64 @@ header {
     & > img {
       @include btn_img;
     }
+  }
+}
+
+// "Solutions" Dropdown Menu
+.dropdown-menu_container {
+  position: relative;
+
+  .dropdown-menu {
+    @include width(100px);
+    @include total-padding(10px 10px);
+    position: absolute;
+    top: 20px;
+    left: -15px;
+    text-align: left;
+    border-radius: 7px;
+    border: 1px solid #e1ddd4;
+    background-color: $default-bg_col;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+    display: none;
+
+
+    & > li {
+      @include list_setup;
+      margin-bottom: 15px;
+
+      & > a {
+        @include link-setup;
+        
+        &:hover {
+          color: $btn_col;
+        } 
+      }
+    }
+
+    & > li:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+/* Responsive */
+@media all and (min-width: 768px) {
+  .header_hamburger-nav {
+    display: none;
+  }
+
+  .header_nav {
+    @include flex;
+  }
+}
+
+@media all and (min-width: 1170px) {
+  .header_nav {
+    margin-right: 0;
+  }
+
+  .header_logo {
+    margin-left: 0;
   }
 }

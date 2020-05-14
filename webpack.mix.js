@@ -20,7 +20,10 @@ mix.js('src/scripts/main.js', 'dist/scripts')
       baseDir: './',
       index: 'index.html'
     }
-  });
+  })
+  .options({
+    processCssUrls: false
+});
 
 // Full API
 // mix.js(src, output);
