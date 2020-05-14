@@ -99,6 +99,7 @@ header {
 
 
 /* Responsive */
+// Tablet
 @media all and (min-width: 768px) {
   .header_hamburger-nav {
     display: none;
@@ -109,6 +110,7 @@ header {
   }
 }
 
+// Desktop
 @media all and (min-width: 1170px) {
   .header_nav {
     margin-right: 0;

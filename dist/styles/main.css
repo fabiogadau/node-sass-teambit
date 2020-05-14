@@ -138,12 +138,7 @@ header {
     margin-left: 0;
   }
 }
-/* MAIN CONTENT */
-main {
-  width: 100%;
-}
-
-/* Jumbotron */
+/* JUMBOTRON */
 .jumbotron {
   max-width: 1170px;
   margin: 0 auto;
@@ -206,6 +201,7 @@ main {
   margin-top: 10px;
 }
 
+/* Jumbotron Banner Link to Email */
 .jumbotron_banner > a {
   text-decoration: none;
   color: #58402c;
@@ -213,13 +209,14 @@ main {
   font-weight: 300;
 }
 
+/* Jumbotron Image */
 .jumbotron_img {
   max-width: 320px;
   margin: 0 auto;
   margin-top: 20px;
 }
 
-/* RESPONSIVE */
+/* Responsive */
 @media all and (min-width: 667px) {
   .jumbotron_banner__text {
     max-width: 95%;
@@ -290,4 +287,8 @@ main {
     max-width: 560px;
     margin: 0 auto;
   }
+}
+/* MAIN CONTENT */
+main {
+  width: 100%;
 }
