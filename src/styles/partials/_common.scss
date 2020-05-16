@@ -14,8 +14,14 @@ body {
 
 
 /* MIXIN */
-
 /* General */
+// Layout
+@mixin flex($justify: flex-start) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+
 // Width
 @mixin total-width($total-width) {
   max-width: $total-width;
@@ -45,13 +51,6 @@ body {
 @mixin list_setup($direction: block) {
   list-style: none;
   display: $direction;
-}
-
-// Layout
-@mixin flex($justify: flex-start) {
-  display: flex;
-  justify-content: $justify;
-  align-items: center;
 }
 
 // Buttons

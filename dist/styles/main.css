@@ -142,150 +142,170 @@ header {
 .jumbotron {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 130px 0;
+  padding: 100px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Jumbotron Banner */
+.jumbotron_banner {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.jumbotron_banner__text {
+  width: 100%;
+  padding: 0 35px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   text-align: center;
-}
-
-/* Jumbotron Banner */
-.jumbotron_banner__text {
-  max-width: 80%;
-  margin: 0 auto;
-  text-align: center;
   margin-bottom: 40px;
 }
-.jumbotron_banner__text h1 {
-  font-size: 50px;
+.jumbotron_banner__text > h1 {
+  font-size: 45px;
   font-weight: 600;
   margin-bottom: 40px;
 }
 
 .jumbotron_banner__btns {
   width: 100%;
-  padding: 0 20px;
-  font-size: 13px;
-  font-weight: 300;
+  padding: 0 25px;
+  font-size: 14px;
+  font-weight: 400;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 20px;
+  color: #bdb5af;
 }
-.jumbotron_banner__btns a {
-  width: 100%;
+.jumbotron_banner__btns > a {
   padding: 10px 15px;
   border-radius: 8px;
   border: 1px solid #30488f;
   background-color: #30488f;
   color: #fff;
   cursor: pointer;
-  font-size: 13px;
+  width: 100%;
+  font-size: 14px;
   font-weight: 400;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
 }
-.jumbotron_banner__btns a > img {
+.jumbotron_banner__btns > a > img {
   max-width: 18px;
   margin-right: 12px;
-  margin-right: 0;
 }
 .jumbotron_banner__btns > a:first-child {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 .jumbotron_banner__btns > a:last-child {
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 /* Jumbotron Banner Link to Email */
-.jumbotron_banner > a {
+.jumbotron_banner__linkToEmail {
   text-decoration: none;
   color: #58402c;
   font-size: 13px;
-  font-weight: 300;
+  font-weight: 400;
+  margin-top: 20px;
 }
 
 /* Jumbotron Image */
 .jumbotron_img {
-  max-width: 320px;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.jumbotron_img > img {
+  max-width: 100%;
   margin: 0 auto;
-  margin-top: 20px;
 }
 
 /* Responsive */
 @media all and (min-width: 667px) {
-  .jumbotron_banner__text {
-    max-width: 95%;
-    margin: 0 auto;
-    margin-bottom: 40px;
-  }
-
   .jumbotron_banner__btns {
-    width: 100%;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
   }
-  .jumbotron_banner__btns a {
-    width: 175px;
+  .jumbotron_banner__btns > a {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #30488f;
+    background-color: #30488f;
+    color: #fff;
+    cursor: pointer;
+    width: 200px;
   }
   .jumbotron_banner__btns > a:first-child {
     margin-bottom: 0;
-    margin-right: 20px;
+    margin-right: 15px;
   }
   .jumbotron_banner__btns > a:last-child {
     margin-top: 0;
-    margin-left: 20px;
+    margin-left: 15px;
   }
 
   .jumbotron_img {
-    max-width: 620px;
-    margin: 0 auto;
+    padding: 30px 50px;
+  }
+}
+@media all and (min-width: 768px) {
+  .jumbotron_img {
+    padding: 30px 90px;
   }
 }
 @media all and (min-width: 1024px) {
   .jumbotron_banner__text {
-    max-width: 70%;
-    margin: 0 auto;
-    margin-bottom: 40px;
+    padding: 0 200px;
+  }
+
+  .jumbotron_img {
+    padding: 30px 200px;
   }
 }
 @media all and (min-width: 1170px) {
   .jumbotron {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     flex-direction: row;
-    text-align: left;
   }
 
   .jumbotron_banner {
-    margin-right: 50px;
+    width: 50%;
   }
 
   .jumbotron_banner__text {
-    max-width: 100%;
-    margin: 0 auto;
+    width: 100%;
+    padding: 0 50px 0 0;
     text-align: left;
-    margin-bottom: 40px;
   }
 
   .jumbotron_banner__btns {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    flex-direction: row;
+    padding: 0;
+  }
+
+  .jumbotron_banner__linkToEmail {
+    align-self: flex-start;
   }
 
   .jumbotron_img {
-    max-width: 560px;
-    margin: 0 auto;
+    width: 50%;
+    padding: 0;
   }
 }
 /* MAIN CONTENT */

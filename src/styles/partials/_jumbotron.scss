@@ -1,21 +1,29 @@
 /* JUMBOTRON */
 .jumbotron {
   @include total-width($desktop-width);
-  @include total-padding(130px 0);
+  @include total-padding(100px 0);
   @include flex;
   flex-direction: column;
-  text-align: center;
 }
 
 /* Jumbotron Banner */
+.jumbotron_banner {
+  @include width(100%);
+  @include flex;
+  flex-direction: column;
+}
+
 // Jumbotron Banner Text
 .jumbotron_banner__text {
-  @include total-width(80%);
+  @include width(100%);
+  @include total-padding(0 35px);
+  @include flex;
+  flex-direction: column;
   text-align: center;
   margin-bottom: 40px;
 
-  h1 {
-    @include font-setup(50px, 600);
+  & > h1 {
+    @include font-setup(45px, 600);
     margin-bottom: 40px;
   }
 }
@@ -23,116 +31,126 @@
 // Jumbotron Banner Buttons
 .jumbotron_banner__btns {
   @include width(100%);
-  @include total-padding(0 20px);
-  @include font-setup(13px, 300);
+  @include total-padding(0 25px);
+  @include font-setup(14px, 400);
   @include flex;
   flex-direction: column;
-  margin-bottom: 20px;
-  
-  a {
-    @include width(100%);
+  color: #bdb5af;
+
+  & > a {
     @include btn(10px 15px);
-    @include font-setup(13px, 400);
+    @include width(100%);
+    @include font-setup(14px, 400);
     @include flex(center);
     text-decoration: none;
 
     & > img {
       @include btn_img;
-      margin-right: 0;
     }
   }
 
   & > a:first-child {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   & > a:last-child {
-    margin-top: 10px;
+    margin-top: 12px;
   }
 }
 
 /* Jumbotron Banner Link to Email */
-.jumbotron_banner {
-
-  & > a {
-    @include link-setup;
-    @include font-setup(13px, 300);
-  }
+.jumbotron_banner__linkToEmail {
+  @include link-setup;
+  @include font-setup(13px, 400);
+  margin-top: 20px;
 }
+
 
 /* Jumbotron Image */
 .jumbotron_img {
-  @include total-width(320px);
-  margin-top: 20px;
+  @include width(100%);
+  @include total-padding(30px);
+  @include flex;
+
+  & > img {
+    @include total-width(100%);
+  }
 }
 
 
 /* Responsive */
 // Mobile Landscape
 @media all and (min-width: 667px) {
-  .jumbotron_banner__text {
-    @include total-width(95%);
-    margin-bottom: 40px;
-  }
-
   .jumbotron_banner__btns {
-    @include width(100%);
-    @include total-padding(0);
     @include flex(center);
     flex-direction: row;
-    
-    a {
-      @include width(175px);
+  
+    & > a {
+      @include btn(10px 15px);
+      @include width(200px);
     }
   
     & > a:first-child {
       margin-bottom: 0;
-      margin-right: 20px;
+      margin-right: 15px;
     }
   
     & > a:last-child {
       margin-top: 0;
-      margin-left: 20px;
+      margin-left: 15px;
     }
   }
 
   .jumbotron_img {
-    @include total-width(620px);
+    @include total-padding(30px 50px);
   }
 }
 
 // Tablet
+@media all and (min-width: 768px) {
+  .jumbotron_img {
+    @include total-padding(30px 90px);
+  }
+}
+
+// Tablet Landscape
 @media all and (min-width: 1024px) {
   .jumbotron_banner__text {
-    @include total-width(70%);
-    margin-bottom: 40px;
+    @include total-padding(0 200px);
+  }
+
+  .jumbotron_img {
+    @include total-padding(30px 200px);
   }
 }
 
 // Desktop
 @media all and (min-width: 1170px) {
   .jumbotron {
-    @include flex;
     flex-direction: row;
-    text-align: left;
   }
 
   .jumbotron_banner {
-    margin-right: 50px;
+    @include width(50%);
   }
 
   .jumbotron_banner__text {
-    @include total-width(100%);
+    @include width(100%);
+    @include total-padding(0 50px 0 0);
     text-align: left;
-    margin-bottom: 40px;
   }
 
   .jumbotron_banner__btns {
     @include flex;
-    flex-direction: row;
+    @include total-padding(0);
+  }
+
+  .jumbotron_banner__linkToEmail {
+   align-self: flex-start;
   }
 
   .jumbotron_img {
-    @include total-width(560px);
+    @include width(50%);
+    @include total-padding(0);
   }
 }
