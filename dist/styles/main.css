@@ -7,7 +7,6 @@
 }
 
 body {
-  width: 100vw;
   font-family: "Open Sans", sans-serif;
   color: #58402c;
   background-color: #fff;
@@ -139,6 +138,11 @@ header {
   }
 }
 /* JUMBOTRON */
+.jumbotron_container {
+  width: 100%;
+  background-color: #fff;
+}
+
 .jumbotron {
   max-width: 1170px;
   margin: 0 auto;
@@ -147,6 +151,7 @@ header {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  background-color: #fff;
 }
 
 /* Jumbotron Banner */
@@ -311,4 +316,114 @@ header {
 /* MAIN CONTENT */
 main {
   width: 100%;
+  background-color: #ffe7d2;
+}
+
+.main-content_section {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 70px 20px 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border-bottom: 1px solid #bdb5af;
+}
+.main-content_section > h2 {
+  width: 65%;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.main-content_section > h2:last-child {
+  margin-top: 100px;
+}
+
+.description_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.description {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 60px;
+}
+
+.description_img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.description_img > img {
+  width: 100%;
+}
+
+.description_img-safe {
+  width: 60%;
+  margin-bottom: 20px;
+}
+.description_img-safe > img {
+  width: 100%;
+}
+
+.section_img {
+  width: 80%;
+  margin-top: 80px;
+}
+.section_img > img {
+  width: 100%;
+}
+
+.main-content_section2 {
+  background-color: #fff;
+}
+
+/* Responsive */
+@media all and (min-width: 667px) {
+  .main-content_section h2 {
+    width: 100%;
+  }
+
+  .description {
+    width: 25%;
+  }
+
+  .section_img {
+    width: 45%;
+  }
+
+  .description_img-safe {
+    width: 50%;
+  }
+}
+@media all and (min-width: 768px) {
+  .description_container {
+    width: 80%;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .description {
+    width: 25%;
+  }
+
+  .section_img {
+    width: 40%;
+  }
+}
+@media all and (min-width: 1024px) {
+  .description {
+    width: 20%;
+  }
+
+  .section_img {
+    width: 30%;
+  }
 }

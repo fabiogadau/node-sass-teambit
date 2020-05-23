@@ -6,7 +6,6 @@
 }
 
 body {
-  width: 100vw;
   font-family: 'Open Sans', sans-serif;
   color: $font_col;
   background-color: $body-bg_col;
@@ -71,4 +70,9 @@ body {
 // Border
 @mixin border-bottom_col {
   border-bottom: $border-bott_col;
+}
+
+// Main content sections Setup
+@mixin main-content__sections-setup {
+  
 }

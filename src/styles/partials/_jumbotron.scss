@@ -1,9 +1,15 @@
 /* JUMBOTRON */
+.jumbotron_container {
+  @include width(100%);
+  background-color: $default-bg_col;
+}
+
 .jumbotron {
   @include total-width($desktop-width);
   @include total-padding(100px 0);
   @include flex;
   flex-direction: column;
+  background-color: $default-bg_col;
 }
 
 /* Jumbotron Banner */
