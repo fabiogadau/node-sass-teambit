@@ -63,14 +63,68 @@ main {
   }
 }
 
-// Main content section
-.main-content_section2 {
+// Main content section 2
+.main-content_section2__container {
+  @include width(100%);
   background-color: $default-bg_col;
+}
+
+.main-content_section2 {
+  @include total-width($main-content_section2__width);
+  @include total-padding(90px 0 90px);
+  @include flex(center);
+}
+
+.section2-content {
+  @include total-width($desktop-width);
+  @include flex(center);
+  flex-direction: column;
+}
+
+.section2-img {
+  @include width(85%);
+  margin-bottom: 20px;
+
+  & > img {
+    @include width(100%);
+  }
+}
+
+.section2-description {
+  @include width(100%);
+  @include flex(center);
+  flex-direction: column;
+  text-align: center;
+
+  & > h2 {
+    @include width(80%);
+    @include font-setup(24px, 600);
+    margin-bottom: 20px;
+  }
+
+  & > p {
+    @include width(80%);
+  }
+
+  & > a {
+    text-decoration: none;
+    color: $btn_col;
+    margin: 30px 0 40px;
+  }
+}
+
+.section2-description_img {
+  @include width(80%);
+
+  & > img {
+    @include width(100%);
+  }
 }
 
 /* Responsive */
 // Smartphone Landscape
 @media all and (min-width: 667px) {
+  // Main content section
   .main-content_section h2 {
     @include width(100%);
   }
@@ -86,10 +140,20 @@ main {
   .description_img-safe {
     @include width(50%);
   }
+
+  // Main content section 2
+  .section2-description p {
+    @include width(90%);
+  }
+
+  .section2-description_img {
+    @include width(40%);
+  }
 }
 
 // Tablet
 @media all and (min-width: 768px) {
+  // Main content section
   .description_container {
     @include width(80%);
     justify-content: space-between;
@@ -103,15 +167,57 @@ main {
   .section_img {
     @include width(40%);
   }
+
+  // Main content section 2
+  .section2-description p {
+    @include width(75%);
+    font-size: 20px;
+  }
+
+  .section2-description a {
+    font-size: 22px;
+  }
 }
 
 // Tablet Landscape
 @media all and (min-width: 1024px) {
+  // Main content section
   .description {
-    @include width(20%);
+    @include width(17%);
   }
 
   .section_img {
-    @include width(30%);
+    @include width(25%);
+  }
+
+  .description_img-safe {
+    @include width(40%);
+  }
+
+  // Main content section 2
+  .section2-content {
+    flex-direction: row;
+  }
+  
+  .section2-img {
+    @include width(45%);
+    margin-bottom: 20px;
+  }
+  
+  .section2-description {
+    @include width(45%);
+    text-align: left;
+  
+    & > h2 {
+      @include width(90%);
+    }
+  
+    & > p {
+      @include width(90%);
+    }
+  }
+  
+  .section2-description_img {
+    @include width(60%);
   }
 }
