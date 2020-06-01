@@ -125,6 +125,131 @@ main {
   }
 }
 
+// Main content section 3
+.main-content_section3 {
+  @include width(100%);
+  @include total-padding(90px 30px 90px);
+}
+
+.section3_content {
+  @include total-width(625px);
+  @include flex(center);
+  flex-direction: column;
+}
+
+.section3_title {
+  & h2 {
+    @include font-setup(38px, 600);
+    text-align: center;
+    display: inline;
+    margin-right: 10px;
+  }
+
+  .happy {
+    max-width: 55px;
+    display: inline;
+  }
+
+    & > img {
+      @include width(100%);
+    }
+}
+
+.section3_text {
+  @include total-padding(25px 35px);
+  border: 1px solid #bdb5af;
+  border-radius: 5px;
+  background-color: $default-bg_col;
+  margin: 60px 0;
+  position: relative;
+
+  & > p {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  .fa-quote-left {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    font-size: 45px;
+    color: $btn_col;
+  }
+}
+
+.section3_sub-text {
+  @include flex;
+}
+
+.sub-text_imgs {
+  @include flex;
+  margin-right: 10px;
+
+  .sub-text_img {
+    @include width(45%);
+  
+    & > img {
+      @include width(100%);
+    }
+  }
+
+  .sub-text_img:first-child {
+    margin-right: 10px;
+  }
+}
+
+.sub-text_text {
+  @include width(100%);
+
+  & > span {
+    display: block;
+  }
+
+  .founders-name {
+    font-size: 14px;
+    color: $btn_col;
+  }
+
+  .founders {
+    font-size: 13px;
+  }
+}
+
+.section3_btns {
+  @include width(100%);
+  @include total-padding(0 25px);
+  @include font-setup(14px, 400);
+  @include flex;
+  flex-direction: column;
+  color: #bdb5af;
+
+  & > a {
+    @include btn(10px 15px);
+    @include width(100%);
+    @include font-setup(14px, 400);
+    @include flex(center);
+    text-decoration: none;
+
+    & > img {
+      @include btn_img;
+    }
+  }
+
+  & > a:first-child {
+    margin-bottom: 12px;
+  }
+
+  & > a:last-child {
+    margin-top: 12px;
+  }
+}
+
+.section3_linkToEmail {
+  @include link-setup;
+  @include font-setup(13px, 400);
+  margin-top: 20px;
+}
+
 /* Responsive */
 // Smartphone Landscape
 @media all and (min-width: 667px) {
@@ -152,6 +277,31 @@ main {
 
   .section2-description_img {
     @include width(40%);
+  }
+
+  // Main content section 3
+  .section3_btns {
+    @include flex(center);
+    flex-direction: row;
+  
+    & > a {
+      @include btn(10px 15px);
+      @include width(200px);
+    }
+  
+    & > a:first-child {
+      margin-bottom: 0;
+      margin-right: 15px;
+    }
+  
+    & > a:last-child {
+      margin-top: 0;
+      margin-left: 15px;
+    }
+  }
+
+  .section3_sub-text {
+    @include width(50%);
   }
 }
 
