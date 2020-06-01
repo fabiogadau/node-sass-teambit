@@ -24,6 +24,10 @@ main {
   }
 }
 
+.main-content_section.noborder {
+  border-bottom: none;
+}
+
 .description_container {
   @include width(100%);
   @include flex(center);
@@ -76,9 +80,9 @@ main {
 }
 
 .section2-content {
-  @include total-width($desktop-width);
   @include flex(center);
   flex-direction: column;
+  max-width: $desktop-width;
 }
 
 .section2-img {
@@ -195,6 +199,14 @@ main {
   }
 
   // Main content section 2
+  .main-content_section2.flex-start {
+    @include flex(flex-start);
+  }
+
+  .main-content_section2.flex-end {
+    @include flex(flex-end);
+  }
+
   .section2-content {
     flex-direction: row;
   }
