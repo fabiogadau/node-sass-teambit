@@ -1,0 +1,134 @@
+/* FOOTER */
+footer {
+   @include width(100%);
+   background-color: $default-bg_col;
+}
+
+.footer-content {
+   @include total-width($desktop-width);
+   @include total-padding(100px 32px 60px);
+}
+
+.footer-text {
+   margin-bottom: 50px;
+
+   .footer-text_img {
+      width: 50px;
+      margin-bottom: 10px;
+   }
+
+   & > p {
+      font-weight: 600;
+   }
+
+   .teambit-link {
+      text-decoration: none;
+      font-weight: 600;
+      color: $btn_col;
+   }
+}
+
+.footer-list {
+   @include list_setup;
+   margin-bottom: 40px;
+
+   & > li {
+      margin-bottom: 15px;
+   }
+
+   & > li:first-child {
+      font-weight: 600;
+      margin-bottom: 25px;
+   }
+
+   & > li a {
+      @include link-setup;
+      font-size: 13px;
+   }
+}
+
+/* Responsive */
+// Mobile Landscape
+@media all and (min-width: 667px) {
+   .footer-list_container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .footer-list {
+         margin-right: 120px;
+      }
+
+      & .footer-list:last-child {
+         max-width: 40%;
+      }
+   }
+}
+ 
+// Tablet
+@media all and (min-width: 768px) {
+   .footer-list_container {
+      .footer-list {
+         margin-right: 240px;
+      }
+   }
+}
+
+// Tablet Landscape
+@media all and (min-width: 1024px) {
+   .footer-content {
+      display: flex;
+   }
+
+   .footer-text {
+      width: 35%;
+      margin-right: 60px;
+      display: flex;
+
+      .footer-text_img {
+         width: 35%;
+         margin-right: 10px;
+         margin-bottom: 0;
+         align-self: flex-start;
+      }
+   }
+
+   .footer-list_container {
+      width: 58%;
+      justify-content: flex-start;
+
+      .footer-list {
+         margin-right: 10px;
+         width: 17%;
+      }
+
+      & .footer-list:last-child {
+         margin-right: 0;
+      }
+   }
+}
+
+// Desktop
+@media all and (min-width: 1170px) {
+   .footer-content {
+      @include total-padding(100px 0 60px);
+   }
+
+   .footer-text {
+      width: 28%;
+   }
+
+   .footer-list_container {
+      width: 65%;
+
+      .footer-list {
+         margin-right: 10px;
+         width: 17%;
+      }
+
+      & .footer-list:last-child {
+         margin-right: 0;
+      }
+   }
+}

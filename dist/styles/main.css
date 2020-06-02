@@ -683,12 +683,13 @@ main {
   }
 
   .section2-img {
-    width: 45%;
+    width: 80%;
     margin-bottom: 20px;
   }
 
   .section2-description {
     width: 45%;
+    align-items: flex-start;
     text-align: left;
   }
   .section2-description > h2 {
@@ -700,5 +701,121 @@ main {
 
   .section2-description_img {
     width: 60%;
+    align-self: center;
+  }
+}
+/* FOOTER */
+footer {
+  width: 100%;
+  background-color: #fff;
+}
+
+.footer-content {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 100px 32px 60px;
+}
+
+.footer-text {
+  margin-bottom: 50px;
+}
+.footer-text .footer-text_img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+.footer-text > p {
+  font-weight: 600;
+}
+.footer-text .teambit-link {
+  text-decoration: none;
+  font-weight: 600;
+  color: #30488f;
+}
+
+.footer-list {
+  list-style: none;
+  display: block;
+  margin-bottom: 40px;
+}
+.footer-list > li {
+  margin-bottom: 15px;
+}
+.footer-list > li:first-child {
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.footer-list > li a {
+  text-decoration: none;
+  color: #58402c;
+  font-size: 13px;
+}
+
+/* Responsive */
+@media all and (min-width: 667px) {
+  .footer-list_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .footer-list_container .footer-list {
+    margin-right: 120px;
+  }
+  .footer-list_container .footer-list:last-child {
+    max-width: 40%;
+  }
+}
+@media all and (min-width: 768px) {
+  .footer-list_container .footer-list {
+    margin-right: 240px;
+  }
+}
+@media all and (min-width: 1024px) {
+  .footer-content {
+    display: flex;
+  }
+
+  .footer-text {
+    width: 35%;
+    margin-right: 60px;
+    display: flex;
+  }
+  .footer-text .footer-text_img {
+    width: 35%;
+    margin-right: 10px;
+    margin-bottom: 0;
+    align-self: flex-start;
+  }
+
+  .footer-list_container {
+    width: 58%;
+    justify-content: flex-start;
+  }
+  .footer-list_container .footer-list {
+    margin-right: 10px;
+    width: 17%;
+  }
+  .footer-list_container .footer-list:last-child {
+    margin-right: 0;
+  }
+}
+@media all and (min-width: 1170px) {
+  .footer-content {
+    padding: 100px 0 60px;
+  }
+
+  .footer-text {
+    width: 28%;
+  }
+
+  .footer-list_container {
+    width: 65%;
+  }
+  .footer-list_container .footer-list {
+    margin-right: 10px;
+    width: 17%;
+  }
+  .footer-list_container .footer-list:last-child {
+    margin-right: 0;
   }
 }

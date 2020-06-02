@@ -362,12 +362,13 @@ main {
   }
   
   .section2-img {
-    @include width(45%);
+    @include width(80%);
     margin-bottom: 20px;
   }
   
   .section2-description {
     @include width(45%);
+    align-items: flex-start;
     text-align: left;
   
     & > h2 {
@@ -381,5 +382,6 @@ main {
   
   .section2-description_img {
     @include width(60%);
+    align-self: center;
   }
 }
