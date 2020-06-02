@@ -1,6 +1,10 @@
 /* HEADER */
 header {
   @include width(100%);
+  @include border-bottom_col;
+  position: fixed;
+  top: 0;
+  background-color: $default-bg_col;
 }
 
 .header_content {
@@ -8,7 +12,6 @@ header {
   @include font-setup(13px, 600);
   @include total-padding(20px 0 20px);
   @include flex(space-between);
-  @include border-bottom_col;
 }
 
 /* Header Logo */
@@ -21,6 +24,66 @@ header {
   margin-right: 30px;
   font-size: 20px;
   cursor: pointer;
+  position: relative;
+}
+
+// Responsive Dropdown Menu
+.responsive-dropdown {
+  @include width(100vw);
+  @include total-padding(20px 25px);
+  position: absolute;
+  top: 48px;
+  left: -328px;
+  text-align: left;
+  background-color: $default-bg_col;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+
+  & > li {
+    @include list_setup;
+    margin-bottom: 6px;
+
+    & > a {
+      @include link-setup;
+      @include font-setup(14px, 600);
+      
+      &:hover {
+        color: $btn_col;
+      } 
+    }
+  }
+
+  & > li:first-child {
+    height: 10px;
+    width: 10px;
+    margin: 0;
+    background-color: $default-bg_col;
+    z-index: 10;
+    position: absolute;
+    top: -6px;
+    right: 34px;
+    transform: rotate(45deg);
+    border: $border-bott_col;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  & > li:last-child {
+    @include btn(10px 15px);
+    @include width(100%);
+    @include font-setup(14px, 600);
+    @include flex(center);
+    margin-bottom: 0;
+    background-color: $default-bg_col;
+    color: $btn_col;
+
+    & > img {
+      @include btn_img;
+    }
+  }
+}
+
+.responsive-dropdown.invisible {
+  display: none;
 }
 
 /* Header Navbar */
@@ -99,6 +162,13 @@ header {
 
 
 /* Responsive */
+// Smartphone Landscape
+@media all and (min-width: 667px) {
+  .responsive-dropdown {
+    left: -619px;
+  }
+}
+
 // Tablet
 @media all and (min-width: 768px) {
   .header_hamburger-nav {

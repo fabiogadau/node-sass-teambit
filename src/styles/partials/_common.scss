@@ -9,6 +9,26 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: $font_col;
   background-color: $body-bg_col;
+  margin-top: 70px;
+}
+
+.chat {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 11;
+  background-color: $btn_col;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > i {
+    color: #fff;
+    font-size: 30px;
+  }
 }
 
 

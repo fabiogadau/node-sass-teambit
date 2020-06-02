@@ -10,6 +10,25 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #58402c;
   background-color: #fff;
+  margin-top: 70px;
+}
+
+.chat {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 11;
+  background-color: #30488f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chat > i {
+  color: #fff;
+  font-size: 30px;
 }
 
 /* MIXIN */
@@ -17,6 +36,10 @@ body {
 /* HEADER */
 header {
   width: 100%;
+  border-bottom: 1px solid #bdb5af;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
 }
 
 .header_content {
@@ -28,7 +51,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #bdb5af;
 }
 
 /* Header Logo */
@@ -41,6 +63,71 @@ header {
   margin-right: 30px;
   font-size: 20px;
   cursor: pointer;
+  position: relative;
+}
+
+.responsive-dropdown {
+  width: 100vw;
+  padding: 20px 25px;
+  position: absolute;
+  top: 48px;
+  left: -328px;
+  text-align: left;
+  background-color: #fff;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+}
+.responsive-dropdown > li {
+  list-style: none;
+  display: block;
+  margin-bottom: 6px;
+}
+.responsive-dropdown > li > a {
+  text-decoration: none;
+  color: #58402c;
+  font-size: 14px;
+  font-weight: 600;
+}
+.responsive-dropdown > li > a:hover {
+  color: #30488f;
+}
+.responsive-dropdown > li:first-child {
+  height: 10px;
+  width: 10px;
+  margin: 0;
+  background-color: #fff;
+  z-index: 10;
+  position: absolute;
+  top: -6px;
+  right: 34px;
+  transform: rotate(45deg);
+  border: 1px solid #bdb5af;
+  border-right: none;
+  border-bottom: none;
+}
+.responsive-dropdown > li:last-child {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #30488f;
+  background-color: #30488f;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  background-color: #fff;
+  color: #30488f;
+}
+.responsive-dropdown > li:last-child > img {
+  max-width: 18px;
+  margin-right: 12px;
+}
+
+.responsive-dropdown.invisible {
+  display: none;
 }
 
 /* Header Navbar */
@@ -117,6 +204,11 @@ header {
 }
 
 /* Responsive */
+@media all and (min-width: 667px) {
+  .responsive-dropdown {
+    left: -619px;
+  }
+}
 @media all and (min-width: 768px) {
   .header_hamburger-nav {
     display: none;
