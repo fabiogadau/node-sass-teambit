@@ -5,6 +5,7 @@ header {
   position: fixed;
   top: 0;
   background-color: $default-bg_col;
+  z-index: 100;
 }
 
 .header_content {
